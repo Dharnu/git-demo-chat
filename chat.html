@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>Mytrippedia</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="style.css" type="text/css" />
+		<script src='http://ajax.googleapis.com/ajax/libs/jquery/1.2.6/jquery.min.js'></script>
+        <script src="src/strophe.js"></script>
+
+
+        <script src="src/base64.js"></script>
+<!--        <script src="src/bosh.js"></script>
+ -->        <script src="src/core.js"></script>
+<!--         <script src="src/md5.js"></script>
+ -->        <script src="src/polyfills.js"></script>
+        <script src="src/sha1.js"></script>
+        <script src="src/utils.js"></script>
+        <script src="src/websocket.js"></script>
+       <script src="src/strophe.muc.js"></script>
+       <script src="src/strophe.chatstates.js"></script>
+       <script src="chat.js"></script>
+<!--         <script src="strophe-openfire-websocket.js"></script>
+ -->    </head>
+    <body>
+    <div id="chat-form">
+          
+                
+                <h2 align="center">Chat with users online</h2>
+
+                <div class="chat_wrapper">
+                    <div class="message_box" id="message_box"></div>
+                    <div class="panel">
+                        <input type="hidden" name="name" id="name" value="{{ Auth::user()->name }}" maxlength="10" style="width:20%"  />
+                        <span>status:</span>
+                        <span id="isTyping"></span><br>
+                        <input type="text" oninput="resetPausedTimer();" name="message" id="message" placeholder="Message" maxlength="80" style="width:60%" />
+                        <input type="button" id="send-btn" onclick="mysend();" value="Send"/>
+                      
+                    </div>
+                </div>
+           
+
+        </div>
+        <script>
+            
+        </script>
+        
+    </body>
+</html>
